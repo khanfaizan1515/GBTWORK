@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: gbt_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: goley_bhai_timber
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: ./backend
+    container_name: gbt_app
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+    environment:
+      PORT: 3000
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: rootpassword
+      DB_NAME: goley_bhai_timber
+      DB_PORT: 3306
+    depends_on:
+      - db
+
+volumes:
+  db_data:

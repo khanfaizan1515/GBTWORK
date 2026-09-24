@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2d241f;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    color: #5a351f;
+    font-size: 22px;
+}
+
+.logo span {
+    color: #777;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #8a542f;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(55, 32, 18, 0.72),
+            rgba(55, 32, 18, 0.72)
+        ),
+        url("../images/timber-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #a96f42;
+    margin-bottom: 12px;
+}
+
+.hero .small-title {
+    color: #e5b58a;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    color: #eeeeee;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #8a542f;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #6f4225;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #5a351f;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    color: #3a2a21;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-card {
+    padding: 35px;
+    background: #f5eee8;
+    border-left: 5px solid #8a542f;
+}
+
+.about-card h3 {
+    font-size: 30px;
+    color: #5a351f;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products-section {
+    background: #f8f6f3;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #eeeeee;
+}
+
+.product-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    margin-bottom: 12px;
+    color: #4a2d1c;
+}
+
+.product-card p {
+    color: #666;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    padding: 25px;
+    border-top: 3px solid #8a542f;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    padding: 80px 0;
+    background: #3a271c;
+    color: white;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-card {
+    background: white;
+    color: #333;
+    padding: 30px;
+}
+
+.contact-card h3 {
+    color: #5a351f;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin-bottom: 10px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #211812;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    color: #aaa;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .about-content,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
