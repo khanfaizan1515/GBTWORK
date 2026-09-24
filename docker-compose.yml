@@ -8,13 +8,20 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: goley_bhai_timber
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
-
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
   app:
+    healthcheck:
+     test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/health"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
     build: ./backend
     container_name: gbt_app
     restart: always
